@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,16 +12,28 @@
 }
 
 
-#menu-icon{
+#menu-icon {
     font-size: 4rem;
     display: none;
 }
 
-html{
+html {
     font-size: 60%;
 }
 
-.logo{
+.header {
+    background-color: #000;
+    position: sticky;
+    top: 0;
+}
+
+.contact-header {
+    background-color: #000;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
     position: relative;
     font-size: 30px;
     color: #DEB891;
@@ -29,7 +41,7 @@ html{
     font-weight: 550;
 }
 
-.logo::before{
+.logo::before {
     content: '';
     position: absolute;
     top: 0;
@@ -41,25 +53,7 @@ html{
     animation-delay: .4s;
 }
 
-.hero{
-    position: relative;
-    width: 100%;
-    height: 110vh;
-    background: #eff4fd;
-}
-
-.spiderman{
-    position: relative;
-    width: 100%;
-    height: 24vh;
-    background: #eff4fd;
-}
-
-.header{
-    background-color: #000;
-}
-
-nav{
+nav {
     display: flex;
     width: 84%;
     margin: auto;
@@ -67,18 +61,14 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-p{
-    font-size: 18px;
-}
 
-
-nav ul li{
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -86,23 +76,34 @@ nav ul li a{
 }
 
 nav ul li a:hover,
-nav ul li a.active{
+nav ul li a.active {
     color: #DEB891;
 }
 
-.detel{
-    margin-left: 8%;
-    margin-top: 13%;
+p {
+    font-size: 18px;
 }
 
-.detel h1{
+.home-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #eff4fd;
+}
+
+.home-detel {
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+.home-detel h1 {
     position: relative;
     font-size: 50px;
     color: #212121;
     margin-bottom: 20px;
 }
 
-.detel h1::before{
+.home-detel h1::before {
     content: '';
     position: absolute;
     top: 0;
@@ -114,11 +115,12 @@ nav ul li a.active{
     animation-delay: 1s;
 }
 
-.detel h3{
+.home-detel h3 {
     position: relative;
+    font-size: 25px;
 }
 
-.detel h3::before{
+.home-detel h3::before {
     content: '';
     position: absolute;
     top: 0;
@@ -130,13 +132,13 @@ nav ul li a.active{
     animation-delay: 1.3s;
 }
 
-.detel p{
+.home-detel p {
     color: #555;
     line-height: 22px;
     font-style: italic;
 }
 
-.detel a{
+.home-detel a {
     background: #212121;
     padding: 10px 18px;
     text-decoration: none;
@@ -147,7 +149,7 @@ nav ul li a.active{
     border-radius: 5px;
 }
 
-.detel a:hover{
+.home-detel a:hover {
     background: #DEB891;
     padding: 10px 18px;
     text-decoration: none;
@@ -158,11 +160,11 @@ nav ul li a.active{
     border-radius: 5px;
 }
 
-span{
+span {
     color: #DEB891;
 }
 
-.images{
+.images {
     width: 40%;
     height: 50%;
     position: absolute;
@@ -170,7 +172,7 @@ span{
     right: 100px;
 }
 
-.images img{
+.images img {
     height: 100%;
     position: absolute;
     left: 50%;
@@ -179,15 +181,15 @@ span{
     transition: bottom 1s, left 1s;
 }
 
-.images:hover .Shapes{
+.images:hover .Shapes {
     bottom: 40px;
 }
 
-.images:hover .boy{
+.images:hover .boy {
     left: 55%;
 }
 
-.detel button{
+.home-detel button {
     background: #212121;
     padding: 10px 10px;
     text-decoration: none;
@@ -198,7 +200,7 @@ span{
     border-radius: 5px;
 }
 
-.detel button:hover {
+.home-detel button:hover {
     background: #DEB891;
     padding: 10px 10px;
     text-decoration: none;
@@ -209,14 +211,21 @@ span{
     border-radius: 5px;
 }
 
+.service-hero {
+    position: relative;
+    width: 100%;
+    height: 106vh;
+    background: #eff4fd;
+}
+
 .service-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 2fr));
     gap: 2rem;
     margin-right: 8%;
     margin-left: 8%;
     height: 40vh;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 
@@ -229,12 +238,10 @@ span{
 }
 
 .service-container .service-box:hover {
-    border-color: #DEB891;
-    transform: scale(1.02);
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
 }
 
-.service-box .icon{
+.service-box .icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -261,95 +268,50 @@ span{
     background: #DEB891;
 }
 
-.service-box h3{
+.service-box h3 {
     font-size: 3rem;
     margin: .5rem 0 2rem;
     transition: .5s;
 }
 
-.service-box:hover h3{
+.service-box:hover h3 {
     color: #555;
 }
 
-.service-box p{
+.service-box p {
     font-size: 1.6rem;
 }
 
-.service-box:hover p{
+.service-box:hover p {
     color: #555;
 }
 
-h4{
-    font-size: 150%;
+h4 {
+    font-size: 250%;
 }
 
-h3{
+h3 {
     font-size: 180%;
 }
 
-
-#hero, #contacts, h2, h4{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-
-#contacts, .skills{
+.project-hero {
+    position: relative;
+    width: 100%;
+    height: 95vh;
     background: #eff4fd;
 }
 
-#contacts h2{
-    font-size: 30px;
-}
-
-#form input[type="name"]{
-    min-width: 100px;
-    width: 300px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-#form input[type="email"]{
-    min-width: 100px;
-    width: 300px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-
-#form input[type="message"]{
-    min-width: 100px;
-    width: 300px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-#form input[type="submit"]{
-    background: #212121;
-    padding: 10px 10px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #DEB891;
-    display: inline-block;
-    margin: 30px 0;
-    border-radius: 5px;
-}
-
-label{
-    font-size: 180%;
-}
-
-.box{
+.project-box {
     display: flex;
     justify-content:center;
     align-items:center;
     min-height:400px;
+    margin-top: 6vh;
 }
 
-.card{
-    height:300px;
-    width : 300px;
+.project-card {
+    height:400px;
+    width : 400px;
     padding: 20px 35px;
     background:#DEB891;
     border-radius: 20px;
@@ -360,9 +322,20 @@ label{
     transition: 0.3s;
 }
 
-.card:hover {
+.project-card:hover {
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
-  }
+}
+
+.project-card img {
+    padding-right: 10%;
+}
+
+.project-skills a {
+    text-decoration: none;
+    font-size: 120%;
+    margin-left: 35px;
+    margin-top: 5vh;
+}
 
 .container {
     max-width: 600px;
@@ -373,20 +346,74 @@ label{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: space-between;
     padding-block: 24px;
     padding: 2px 16px;
 }
 
-.btn-links{
+.btn-links {
     font-size: 16px;
+}   
+
+label {
+    font-size: 190%;
+}
+
+.contact-hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #eff4fd;
+}
+
+#contacts, h2, h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#contacts, .skills {
+    background: #eff4fd;
+}
+
+#contacts h2 {
+    font-size: 30px;
+}
+
+#form input[type="name"] {
+    min-width: 100px;
+    width: 900px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#form input[type="email"] {
+    min-width: 100px;
+    width: 900px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 
-.skills a{
+#form input[type="message"] {
+    min-width: 100px;
+    width: 900px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+#form input[type="submit"] {
+    background: #212121;
+    padding: 10px 30px;
     text-decoration: none;
+    font-weight: bold;
+    color: #DEB891;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
 }
 
 footer {
@@ -398,7 +425,78 @@ footer {
     color: black;
 }
 
-@keyframes showRight {
+@media screen and (max-width: 768px) {
+    .home-hero {
+        height: 50vh;
+        margin-top: 2vh;
+    }
+
+    .service-hero {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .home-hero {
+        height: 80vh;
+    }
+    
+    .service-hero {
+        height: 80vh;
+    }
+
+    .project-hero {
+        height: 75vh;
+    }
+
+    .project-skills a {
+        text-decoration: none;
+        font-size: 120%;
+        margin-left: 15px;
+        margin-top: 2vh;
+    }
+
+    .project-card {
+        height:350px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@keyframes showRight {
     100% {
         width: 0;
     }
@@ -429,7 +527,7 @@ footer {
     .images{
         bottom: auto;
         width: 100%;
-        /* transform: translateX(370px); */
+        /* transform: translateX(370px); 
         position: relative;
         margin: 8%;
     }
@@ -562,7 +660,7 @@ footer {
         font-size: 3.5rem;
     }
 
-}
+}*/
 
 
 
